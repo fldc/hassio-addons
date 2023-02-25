@@ -1,5 +1,5 @@
 {
-    "name": "custom forked addons"
-    "url": "https://github.com/fldc/hassio-addons"
-    "maintainer": "Fredrik Storm <fredrik@fldc.se>"
+  "name": "Custom Home Assistant Add-On repository",
+  "url": "https://github.com/fldc/hassio-addons/",
+  "maintainer": "Fredrik Storm <fredrik@fldc.se>"
 }
