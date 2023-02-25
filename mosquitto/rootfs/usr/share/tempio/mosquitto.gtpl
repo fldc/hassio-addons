@@ -44,6 +44,7 @@ protocol mqtt
 
 listener 1884
 protocol websockets
+socket_domain ipv4
 
 {{ if .ssl }}
 
@@ -61,6 +62,7 @@ require_certificate {{ .require_certificate }}
 
 listener 8884
 protocol websockets
+socket_domain ipv4
 {{ if .cafile }}
 cafile {{ .cafile }}
 {{ else }}
