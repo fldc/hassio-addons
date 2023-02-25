@@ -42,27 +42,11 @@ include_dir /share/{{ .customize_folder }}
 listener 1883
 protocol mqtt
 
-listener 1884
-protocol websockets
-socket_domain ipv4
-
 {{ if .ssl }}
 
 # Follow SSL listener if a certificate exists
 listener 8883
 protocol mqtt
-{{ if .cafile }}
-cafile {{ .cafile }}
-{{ else }}
-cafile {{ .certfile }}
-{{ end }}
-certfile {{ .certfile }}
-keyfile {{ .keyfile }}
-require_certificate {{ .require_certificate }}
-
-listener 8884
-protocol websockets
-socket_domain ipv4
 {{ if .cafile }}
 cafile {{ .cafile }}
 {{ else }}
